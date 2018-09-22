@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 2.4.4
+  
+deploy:
+  provider: heroku
+  api_key: 9ee6a534-9346-464d-ba76-2a41306e0b25
+  app: app-pizzza
+
