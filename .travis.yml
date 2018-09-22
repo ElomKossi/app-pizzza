@@ -7,3 +7,4 @@ deploy:
   app: app-pizzza-db
   on:
     repo: ElomKossi/app-pizzza
+  run: "rake db:migrate"
