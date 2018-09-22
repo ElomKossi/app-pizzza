@@ -1,10 +1,10 @@
 language: ruby
 rvm:
-  - 2.4.4
-  
+- 2.4.4
 deploy:
   provider: heroku
-  api_key: 9ee6a534-9346-464d-ba76-2a41306e0b25
+  api_key:
+    secure: jPnR++qhgdFh+WunUkBLnBwrx5Y+YAjleIFyCCbt1euHmYI2OqxakZyaEmdl67j7z7svZ49c9SiZvM90+2ZC01/iX2fl/AlapxYcK2Ifg7rlSxtp5ZuAwHNcxAo19S5kxAnUAV4f3Ug9djwO0ZW0lG39dGfVaL4SC057aQoBpz4zMZNda0PySk6ac37mPMW1fT0Iua4wOk0YBYnby21NqMhTldET7f+/2z3qW+XgaftiyxUSjll0zF/eXc+9si/kNkAxbPHmt1CDyyZs981d1MCgmwCLmsYz7HwM/TrpC7FYsR46NxQz3ZA7UU35yGIUHIXpOZVAHWFsWjAGFnCJ17EoN3nhDJRuwodEe26zMF230q8tFuyhNtbU+1ZmjxG5c9y8fKFnyuCKXHNuH0KfMD5on9E2p9g4rozJvFtp9t1DlvjtbPtOQveLuSCdVyhpBWsuJI1whtEj+OEFy8niQiCSXfqqntxBJyiwcgLW1tTThDGOlIMoG0gkZgkv6cRhY5wC5rpjt0nwcJIGY6yThnadgrSP5cdj1xdvI0gxAYovlQeXh/q+nHbtYsFU5BepW1BFD3UTCZfB7W8zO8VBXtSzmJ+DOQJs3OyeurjE2k3XGS0LRQseDlHZNj97QkkZyHF7AgdK4O0Lf2K4SIv7uZBqT0OMh3OWklWCttV5vPk=
   app: app-pizzza
   on:
     repo: ElomKossi/app-pizzza
