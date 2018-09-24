@@ -1,3 +1,6 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=7926ca727758cb0fd57203d2893a4dd97757c602dc9a4a1a0a456092baf2ddd9
 language: ruby
 rvm:
   - 2.4.4
@@ -8,3 +11,9 @@ deploy:
   on:
     repo: ElomKossi/app-pizzza
   run: "rake db:migrate"
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
