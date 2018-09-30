@@ -10,23 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_25_100049) do
-
-  create_table "commandes", force: :cascade do |t|
-    t.string "nom"
-    t.string "address"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "ligne_commandes", force: :cascade do |t|
-    t.integer "commande_id"
-    t.integer "pizza_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["commande_id"], name: "index_ligne_commandes_on_commande_id"
-    t.index ["pizza_id"], name: "index_ligne_commandes_on_pizza_id"
-  end
+ActiveRecord::Schema.define(version: 2018_09_22_181138) do
 
   create_table "pizzas", force: :cascade do |t|
     t.string "name"

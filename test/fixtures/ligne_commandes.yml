@@ -1,9 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  commande: one
-  pizza: one
-
-two:
-  commande: two
-  pizza: two
