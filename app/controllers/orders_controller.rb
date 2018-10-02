@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  skip_before_action :verify_authenticity_token, :only => [:create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
@@ -25,6 +26,9 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
+    params.fetch(:pizzas).each do | pizza |
+      @order.pizzas << Pizza.find(pizza)
+    end
 
     respond_to do |format|
       if @order.save
@@ -69,6 +73,7 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
+      puts params.inspect
       params.fetch(:order, {})
     end
 end
